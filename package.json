@@ -1,7 +1,7 @@
 {
   "name": "tri_bs",
   "version": "1.0.0",
-  "description": "Bootstrap version of Thomas Refrigeration website.",
+  "description": "Bootstrap 4 version of Thomas Refrigeration website.",
   "main": "index.html",
   "scripts": {
     "test": "none YET"
