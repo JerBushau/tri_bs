@@ -75,7 +75,7 @@ ul {
 
 /* Sections */
 section.container {
-  background: rgba(239, 239, 239, 0.95);
+  background: rgba(238, 238, 238, 0.95);
   border-radius: 4px;
   box-shadow: 1px 2px 5px #777;
   max-width: 900px;
