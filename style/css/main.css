@@ -42,7 +42,7 @@ header {
 .nav a {
   font-weight: bold;
   color: #163EB8;
-  transition: color 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .nav a.active {
@@ -52,6 +52,9 @@ header {
 
 .nav a:hover {
   color: #E30D0B;
+  background: rgba(192,192,192, 0.7);
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 
 .nav-up {
@@ -122,6 +125,7 @@ section.container {
 
 .b2t,
 .b2t:focus {
+  background-color: #fff;
   background: linear-gradient(rgba(225,195,125, 0.99), rgba(213,159,39, 0.9));
   box-shadow: 1px 2px 10px #777;
   border-radius: 5px 0 0 0;
@@ -140,7 +144,7 @@ section.container {
 .b2t:hover,
 .b2t:active {
   color: #E30D0B;
-  text-decoration: none
+  text-decoration: none;
 }
 
 /* img stuff */
