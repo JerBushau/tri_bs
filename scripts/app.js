@@ -2,14 +2,14 @@
 // "roll up" header
 var didScroll;
 var lastScrollTop = 0;
-var minScroll = 25;
+var minScroll = 2;
 var navbarHeight = $('.nav').outerHeight();
 
 $(window).scroll(function(event){
     didScroll = true;
 });
 
-// Every 250 miliseconds check didScroll
+// Every 250 milliseconds check didScroll
 setInterval(function() {
   // If true call hasScrolled() & reset
   if (didScroll) {
@@ -20,6 +20,24 @@ setInterval(function() {
 
 function hasScrolled() {
   var st = $(this).scrollTop();
+
+  if ($(window).width() > 850) {
+    var navOffset = $('nav').offset().top;
+
+    if (st >= navOffset) {
+      $('.nav').css('position', 'fixed');
+      $('.nav-spacer').addClass('spacer-visible')
+    } else {
+      if (st < navOffset) {
+        $('.nav').css('position', 'static');
+        $('.nav-spacer').removeClass('spacer-visible')
+      }
+    }
+  } else {
+    navOffset = 0;
+    $('.nav').css('position', 'fixed');
+    $('.nav-spacer').removeClass('spacer-visible')
+  }
   
   // Make sure they scroll more than minScroll
   if(Math.abs(lastScrollTop - st) <= minScroll)
@@ -35,7 +53,7 @@ function hasScrolled() {
   
   // If they scrolled down and are past the navbar, add class .nav-up.
   // This is necessary so you never see what is "behind" the navbar.
-  if (st > lastScrollTop && st > navbarHeight){
+  if (st > navOffset + 150 && st > lastScrollTop && st > navbarHeight){
     // Scroll Down
     $('.nav').removeClass('nav-down').addClass('nav-up');
       
