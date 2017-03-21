@@ -93,14 +93,14 @@ $("form").submit(function(e) {
   e.preventDefault();
   
   $.ajax({
-      url : $(this).attr('action') || window.location.pathname,
-      type: "POST",
-      data: $(this).serialize(),
-      success: function (data) {
-          $("form").html(data);
-      },
-      error: function (jXHR, textStatus, errorThrown) {
-          alert(errorThrown);
-      }
+    url : $(this).attr('action') || window.location.pathname,
+    type: "POST",
+    data: $(this).serialize(),
+    success: function (data) {
+        $("form").html(data);
+    },
+    error: function (jXHR, textStatus, errorThrown) {
+        alert(errorThrown);
+    }
   });
 });
