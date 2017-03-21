@@ -13,6 +13,7 @@ router.post('/mail', (req, res, next) => {
   let transporter = nodemailer.createTransport({
     service: 'hotmail',
     auth: {
+      // this obviously needs to be an actual user and pw... 
       user: 'email',
       pass: 'pw'
     }
