@@ -3,7 +3,7 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 
 // GET /
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next) => {
   return res.render('index');
 });
 

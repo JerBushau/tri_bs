@@ -37,8 +37,8 @@ header {
   font-weight: bold;
   color: #163EB8;
   transition: all 0.5s ease;
-  border-left: transparent;
-  border-right: transparent;
+  border-left:1px solid transparent;
+  border-right:1px solid transparent;
 }
 
 .nav a:hover,
