@@ -2,8 +2,9 @@
   "name": "tri_bs",
   "version": "1.0.0",
   "description": "Bootstrap 4 version of Thomas Refrigeration website.",
-  "main": "index.html",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "none YET"
   },
   "repository": {
@@ -11,5 +12,11 @@
     "url": "none YET"
   },
   "author": "Jeremiah Bushau",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "nodemailer": "^3.1.7",
+    "pug": "^2.0.0-beta11"
+  }
 }

@@ -17,16 +17,6 @@ header {
   margin: 1.822em auto;
 }
 
-.jumbotron {
-  display: flex;
-  background: none;
-  border-radius: 0;
-  flex-direction: column;
-  max-width: 960px;
-  padding: 1em;
-  margin: 56px auto 0;
-}
-
 /* Header/Nav */
 .nav {
   margin: 0 auto;
@@ -80,6 +70,16 @@ ul {
 .number {
   max-width: 400px;
   width: 70%;
+}
+
+.jumbotron {
+  display: flex;
+  background: none;
+  border-radius: 0;
+  flex-direction: column;
+  max-width: 960px;
+  padding: 1em;
+  margin: 56px auto 0;
 }
 
 /* Sections */

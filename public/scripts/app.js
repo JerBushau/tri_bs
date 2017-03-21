@@ -2,7 +2,7 @@
 // "roll up" header
 var didScroll;
 var lastScrollTop = 0;
-var minScroll = 2;
+var delta = 2;
 var navbarHeight = $('.nav').outerHeight();
 
 $(window).scroll(function(event){
@@ -39,8 +39,8 @@ function hasScrolled() {
     $('.nav-spacer').removeClass('spacer-visible')
   }
   
-  // Make sure they scroll more than minScroll
-  if(Math.abs(lastScrollTop - st) <= minScroll)
+  // Make sure they scroll more than delta
+  if(Math.abs(lastScrollTop - st) <= delta)
     return;
 
   // If st is greater than 100 show b2t
@@ -53,7 +53,7 @@ function hasScrolled() {
   
   // If they scrolled down and are past the navbar, add class .nav-up.
   // This is necessary so you never see what is "behind" the navbar.
-  if (st > navOffset + 150 && st > lastScrollTop && st > navbarHeight){
+  if (st > navOffset + 150 && st > lastScrollTop && st > navbarHeight) {
     // Scroll Down
     $('.nav').removeClass('nav-down').addClass('nav-up');
       
@@ -87,3 +87,20 @@ function initMap() {
     map: map
   });
 }
+
+// email form 
+$("form").submit(function(e) {
+  e.preventDefault();
+  
+  $.ajax({
+      url : $(this).attr('action') || window.location.pathname,
+      type: "POST",
+      data: $(this).serialize(),
+      success: function (data) {
+          $("form").html(data);
+      },
+      error: function (jXHR, textStatus, errorThrown) {
+          alert(errorThrown);
+      }
+  });
+});

@@ -17,8 +17,7 @@
   <body>
 
     <header>
-      
-
+  
       <div class="jumbotron">
         <img class="logo" src="imgs/logo.png">
         <img class="number" src="imgs/number.png">
@@ -40,9 +39,6 @@
       
       <div class="nav-spacer"></div>
     </header>
-
-    
-
 
     <!-- SERVICE SECTION -->
     <section id="service" class="container text-center">
@@ -244,10 +240,10 @@
           <div class="modal-body">
             <p>The program schedules regular visits to check all of the most common refrigeration and HVAC issues that we find. During our visit, we also clean your equipment to ensure that it is in ideal working condition. This greatly reduces the number of service calls you'll be making, while increasing the overall life expectancy of your equipment. Give us a call today to create a preventative maintenance program customized to suit the needs of your business. <span class="red">1-812-288-8144</span>.</p>
             <hr>
-            <form class="form-inline text-center justify-content-center">
+            <form action="/mail" method="post" class="form-inline text-center justify-content-center">
               <span class="mb-3">Get a reminder to call and ask about a preventative maintenance plan customized for your equipment:</span>
-              <label class="sr-only" for="inlineFormInput">E-mail</label>
-              <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="address@example.com">
+              <label class="sr-only" for="email-input">E-mail</label>
+              <input name="email" type="email" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email-input" placeholder="address@example.com">
 
               <button type="submit" class="btn btn-secondary">Remind me!</button>
             </form>
