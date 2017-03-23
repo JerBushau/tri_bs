@@ -94,12 +94,15 @@ function initMap() {
 
 // email form 
 $("form").submit(function(e) {
+  // prevent page reload
   e.preventDefault();
   
+  // send ajax request
   $.ajax({
     url : $(this).attr('action') || window.location.pathname,
     type: "POST",
     data: $(this).serialize(),
+    // on success inject view
     success: function (data) {
         $("form").html(data);
     },
