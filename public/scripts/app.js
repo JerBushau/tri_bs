@@ -21,22 +21,26 @@ setInterval(function() {
 function hasScrolled() {
   var st = $(this).scrollTop();
 
+  // if window.width() is greater than 850 do sticky stuff 
   if ($(window).width() > 850) {
     var navOffset = $('nav').offset().top;
 
+    // if st is greater than navoffset init sticky nav
     if (st >= navOffset) {
-      $('.nav').css('position', 'fixed');
-      $('.nav-spacer').addClass('spacer-visible')
+      $('.nav').addClass('sticky');
+      $('.nav-spacer').addClass('spacer-visible');
+      //else remove it
     } else {
       if (st < navOffset) {
-        $('.nav').css('position', 'static');
-        $('.nav-spacer').removeClass('spacer-visible')
+        $('.nav').removeClass('sticky');
+        $('.nav-spacer').removeClass('spacer-visible');
       }
     }
+    // else if window.width() is less than 850 just keep it sticky/fixed to top
   } else {
     navOffset = 0;
-    $('.nav').css('position', 'fixed');
-    $('.nav-spacer').removeClass('spacer-visible')
+    $('.nav').addClass('sticky');
+    $('.nav-spacer').removeClass('spacer-visible');
   }
   
   // Make sure they scroll more than delta

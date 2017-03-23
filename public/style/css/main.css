@@ -53,6 +53,10 @@ header {
     top: -45px;
 }
 
+.sticky {
+  position: fixed;
+}
+
 .spacer-visible {
   height: 40px;
 }
