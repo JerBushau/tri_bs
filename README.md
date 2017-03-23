@@ -10,5 +10,7 @@ The back-end uses Node and Express to handle form data and send an e-mail to cus
 To view the project:
 + `git clone` repository
 + navigate to containing folder
++ run `git checkout express-back-end`
 + run `npm install`
 + run `npm start`
++ navigate your browser to `localhost:3000`
