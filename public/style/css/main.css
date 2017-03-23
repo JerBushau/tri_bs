@@ -4,13 +4,17 @@ body {
   background: radial-gradient(circle, #5b77cd 35%, rgba(255,255,255, 0.9) 96%);
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+}
+
 img {
   margin: auto;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
+.form-control:focus {
+  border-color: #163EB8;
 }
 
 .row {
@@ -18,6 +22,16 @@ header {
 }
 
 /* Header/Nav */
+.jumbotron {
+  display: flex;
+  background: none;
+  border-radius: 0;
+  flex-direction: column;
+  max-width: 960px;
+  padding: 1em;
+  margin: 56px auto 0;
+}
+
 .nav {
   margin: 0 auto;
   background: linear-gradient(rgba(225,195,125, 1) 30%, rgba(208,162,74,1));
@@ -76,16 +90,6 @@ ul {
   width: 70%;
 }
 
-.jumbotron {
-  display: flex;
-  background: none;
-  border-radius: 0;
-  flex-direction: column;
-  max-width: 960px;
-  padding: 1em;
-  margin: 56px auto 0;
-}
-
 /* Sections */
 section.container {
   background: rgba(238, 238, 238, 0.95);
@@ -119,6 +123,15 @@ section.container {
 
 .modal-body {
   padding: 20px;
+}
+
+/* modal */
+.modal-header {
+  border-color: rgba(0, 0, 0, 0.0980392); 
+}
+
+.modal-content {
+  background: rgba(238, 238, 238, 0.95);
 }
 
 /* buttons */
