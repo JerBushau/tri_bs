@@ -35,8 +35,8 @@ img {
 .nav {
   margin: 0 auto;
   background: linear-gradient(rgba(225,195,125, 1) 30%, rgba(208,162,74,1));
-  box-shadow: 1px 2px 7px #777;
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 4px #777;
   transition: all 0.8s ease;
   position: static;
   justify-content: center;
@@ -69,6 +69,8 @@ img {
 
 .sticky {
   position: fixed;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 1px 2px 12px #777;
 }
 
 .spacer-visible {
@@ -94,7 +96,7 @@ ul {
 section.container {
   background: rgba(238, 238, 238, 0.95);
   border-radius: 4px;
-  box-shadow: 1px 2px 5px #777;
+  box-shadow: 1px 2px 4px #777;
   max-width: 900px;
   padding: 2em;
   text-align: left;
@@ -131,7 +133,17 @@ section.container {
 }
 
 .modal-content {
-  background: rgba(238, 238, 238, 0.95);
+  background: rgba(238, 238, 238, 0.98);
+}
+
+.close {
+  color: #163EB8;
+  transition: all 0.5s ease;
+}
+
+.close:hover {
+  color: #E30D0B;
+  opacity: 1;
 }
 
 /* buttons */
@@ -151,7 +163,7 @@ section.container {
 .b2t:focus {
   background-color: #fff;
   background: linear-gradient(rgba(225,195,125, 1) 30%, rgba(208,162,74,1));
-  box-shadow: 1px 2px 7px #777;
+  box-shadow: 1px 2px 12px #777;
   border-radius: 4px 0 0 0;
   font-weight: bold;
   color: #163EB8;
