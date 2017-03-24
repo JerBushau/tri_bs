@@ -9,7 +9,8 @@ $(window).scroll(function(event){
     didScroll = true;
 });
 
-// Every 250 milliseconds check didScroll
+// Attaching functions to .scroll() is expensive so instead use 
+// setInterval every 250 milliseconds & check didScroll
 setInterval(function() {
   // If true call hasScrolled() & reset
   if (didScroll) {
