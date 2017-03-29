@@ -1,5 +1,5 @@
 
-// "roll up" header
+// "roll up" nav
 var didScroll;
 var lastScrollTop = 0;
 var delta = 2;
@@ -37,7 +37,7 @@ function hasScrolled() {
         $('.nav-spacer').removeClass('spacer-visible');
       }
     }
-    // else if window.width() is less than 850 just keep it sticky/fixed to top
+    // else window.width() is less than 850 just keep it sticky/fixed to top
   } else {
     navOffset = 0;
     $('.nav').addClass('sticky');
@@ -57,8 +57,7 @@ function hasScrolled() {
   }
   
   // If they scrolled down and are past the navbar, add class .nav-up.
-  // This is necessary so you never see what is "behind" the navbar.
-  if (st > navOffset + 150 && st > lastScrollTop && st > navbarHeight) {
+  if (st > (navOffset + 150) && st > lastScrollTop && st > navbarHeight) {
     // Scroll Down
     $('.nav').removeClass('nav-down').addClass('nav-up');
       
