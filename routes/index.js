@@ -38,7 +38,7 @@ router.post('/mail', (req, res, next) => {
   // use newly created transporter and mail options to send mail
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-        return console.log('Well, here\'s your problem:', error);
+        return console.log('Not fully implemented, no valid auth provided:', error);
     }
     console.log('Message %s sent: %s', info.messageId, info.response);
   });
