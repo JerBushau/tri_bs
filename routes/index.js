@@ -13,9 +13,9 @@ router.post('/mail', (req, res, next) => {
 
   // use nodemailer to create transportor
   let transporter = nodemailer.createTransport({
-    service: 'hotmail',
+    service: 'gmail',
     auth: {
-      // this obviously needs to be an actual user and pw 
+      // this obviously needs to be an actual user and pw
       // could set them as enviromental variables on the server
       // look into using sendgrid
       user: 'email',
@@ -26,11 +26,11 @@ router.post('/mail', (req, res, next) => {
   // mail options
   let mailOptions = {
     // sender address
-    from: '<noreply@noreply.com>', 
+    from: '<noreply@noreply.com>',
     // list of receivers
     to: email,
-    // Subject line 
-    subject: 'Get your refrigeration equipment in tip-top shape!', 
+    // Subject line
+    subject: 'Get your refrigeration equipment in tip-top shape!',
     // html body
     html: '<h1>;)</h1> <p>Dont forget to call Thomas Refrigeration and find out about a custom preventative maintenance program today!</p>'
   };
@@ -43,7 +43,7 @@ router.post('/mail', (req, res, next) => {
     console.log('Message %s sent: %s', info.messageId, info.response);
   });
 
-  // for now render thanks view whether sendMail was successful or not 
+  // for now render thanks view whether sendMail was successful or not
   return res.render('thanks', {email: email});
 });
 

@@ -9,7 +9,7 @@ $(window).scroll(function(event){
     didScroll = true;
 });
 
-// Attaching functions to .scroll() is expensive so instead use 
+// Attaching functions to .scroll() is expensive so instead use
 // setInterval every 250 milliseconds & check didScroll
 setInterval(function() {
   // If true call hasScrolled() & reset
@@ -17,12 +17,12 @@ setInterval(function() {
     hasScrolled();
     didScroll = false;
   }
-}, 250);
+}, 50);
 
 function hasScrolled() {
   var st = $(this).scrollTop();
 
-  // if window.width() is greater than 850 do sticky stuff 
+  // if window.width() is greater than 850 do sticky stuff
   if ($(window).width() > 850) {
     var navOffset = $('nav').offset().top;
 
@@ -43,7 +43,7 @@ function hasScrolled() {
     $('.nav').addClass('sticky');
     $('.nav-spacer').removeClass('spacer-visible');
   }
-  
+
   // Make sure they scroll more than delta
   if(Math.abs(lastScrollTop - st) <= delta)
     return;
@@ -55,23 +55,23 @@ function hasScrolled() {
   } else {
     $('.b2t').css('margin', '-60px');
   }
-  
+
   // If they scrolled down and are past the navbar, add class .nav-up.
   if (st > (navOffset + 150) && st > lastScrollTop && st > navbarHeight) {
     // Scroll Down
     $('.nav').removeClass('nav-down').addClass('nav-up');
-      
+
   } else {
     // Scroll Up
     if(st + $(window).height() < $(document).height()) {
       $('.nav').removeClass('nav-up').addClass('nav-down');
     }
   }
- 
+
   lastScrollTop = st;
 }
 
-// Google maps stuff 
+// Google maps stuff
 function initMap() {
   var uluru = {lat: 38.2847077, lng: -85.7217259};
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -92,11 +92,11 @@ function initMap() {
   });
 }
 
-// email form 
+// email form
 $("form").submit(function(e) {
   // prevent page reload
   e.preventDefault();
-  
+
   // send ajax request
   $.ajax({
     url : $(this).attr('action') || window.location.pathname,
